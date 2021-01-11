@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT mp3 (artist+)>
+<!ELEMENT artist (membersIFgroup?, startcareer, endcareer?, country, album+)>
+<!ATTLIST artist artistname CDATA #REQUIRED>
+<!ELEMENT membersIFgroup (#PCDATA)>
+<!ATTLIST membersIFgroup groupORperson (group | person) #REQUIRED >
+<!ELEMENT startcareer (#PCDATA)>
+<!ELEMENT endcareer (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT album (image, producer, engineersmixers?, songwriters, masteringengineer?, a_label, tracks, releases)>
+<!ATTLIST album albumname CDATA #REQUIRED>
+<!ATTLIST album albumtype (album | song) #REQUIRED>
+<!ATTLIST album a_sku ID #REQUIRED>
+<!ATTLIST album catagory (Grammy_Winner | Grammy_Nominee | Personal_Favorite) #IMPLIED>
+<!ELEMENT image (#PCDATA)>
+<!ATTLIST image citation CDATA #REQUIRED>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT engineersmixers (#PCDATA)>
+<!ELEMENT songwriters (#PCDATA)>
+<!ELEMENT masteringengineer (#PCDATA)>
+<!ELEMENT a_label (#PCDATA)>
+<!ELEMENT tracks (track+)>
+<!ELEMENT track (title, rankposition, length, writers)>
+<!ATTLIST track albumref IDREF #REQUIRED>
+<!ATTLIST track type (album | song) #REQUIRED>
+<!ATTLIST track t_sku ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT rankposition (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT writers (#PCDATA)>
+<!ELEMENT releases (release+)> 
+<!ELEMENT release (date, r_label?, r_catalogue_number?, r_barcode?, format, r_country?)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT r_label (#PCDATA)>
+<!ELEMENT r_catalogue_number (#PCDATA)>
+<!ELEMENT r_barcode (#PCDATA)>
+<!ELEMENT format (#PCDATA)>
+<!ELEMENT r_country (#PCDATA)>
